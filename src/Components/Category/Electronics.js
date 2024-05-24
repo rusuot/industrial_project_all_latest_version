@@ -1,0 +1,104 @@
+/** @format */
+
+import React, { useEffect, useState, useContext } from "react";
+import { NavLink } from "react-router-dom";
+import WishContext from "../../store/WishContext";
+import Spinner from "../Spinner";
+import Footer from "../Footer";
+import LowerNav from "../LowerNav";
+import "../deals.css";
+import Add from "./Img/heart.png";
+import Added from "./Img/red-heart.png";
+import rating from "./Img/rating.png";
+import productsData from "../products.json";
+function Electronics() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const wishContext = useContext(WishContext);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        setProducts(
+          productsData.filter((item) => item.category == "electronics")
+        );
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      }
+      setLoading(false);
+    }
+
+    fetchProducts();
+  }, []);
+  const isAdded = (itemId) =>
+    wishContext.items.some((item) => item.id === itemId);
+
+  return (
+    <div className="Deals">
+      <p className="deals-head">Electronics</p>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className="deal-items">
+          {products.map((item) => (
+            <div className="card" key={item.id}>
+              <div className="card-img-data">
+                <img
+                  src={item.thumbnail}
+                  alt={item.title}
+                  className="card-img"
+                />
+                <img
+                  onClick={() => {
+                    isAdded(item.id)
+                      ? wishContext.removeItem(item.id)
+                      : wishContext.addItem(item);
+                  }}
+                  src={isAdded(item.id) ? Added : Add}
+                  alt={isAdded(item.id) ? "Remove from cart" : "Add to cart"}
+                  className="add-list"
+                />
+                <NavLink to={`/product/${item.id}`}>
+                  <button className="view">View product</button>
+                </NavLink>
+              </div>
+              <div className="card-data">
+                <p className="card-title">
+                  {item.title.length >= 32
+                    ? `${item.title.slice(0, 32)}..`
+                    : item.title}
+                </p>
+                <div className="category-rating">
+                  <p className="card-category">{item.category}</p>
+                  <div className="rating">
+                    {[...Array(5)].map((_, i) => (
+                      <img
+                        key={i}
+                        src={rating}
+                        alt="Rating"
+                        className="rating-img"
+                      />
+                    ))}
+                    <p className="rating-text">
+                      5 ({item.reviews.total_reviews} reviews)
+                    </p>
+                  </div>
+                </div>
+                <div className="card-price">
+                  <p className="discount">${item.price.current_price}</p>
+                  <p className="mrp">
+                    ${Math.round(item.price.current_price * 1.66)}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+      <LowerNav />
+      <Footer />
+    </div>
+  );
+}
+
+export default Electronics;
