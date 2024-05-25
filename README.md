@@ -31,6 +31,10 @@ Dynamic prototype link:\
 ![image](https://github.com/rusuot/industrial_project_all_latest_version/assets/156461904/7f29a922-b11a-461a-bae4-c1af34da1123)
 
 # Email Notification Node (code sample) 
+Accessible code:
+https://github.com/rusuot/industrial_project_all_latest_version/blob/83881ee0721ed15208a9490af65ecf8bed48d749/functions/index.js#L12 
+
+Screenshot sample:
 ![image](https://github.com/rusuot/industrial_project_all_latest_version/assets/156461904/acbcc79f-b453-4983-a62a-91036dca2deb)
 
 
