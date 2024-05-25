@@ -3,7 +3,7 @@ This repo contains the entire project code, the initial POC started by Ovi and c
 The purpose for this project is Industrial Consulting Project (QHO635) - Solent University.
 
 # Please check README.md from next repo for details and explanations:
-https://github.com/rusuot/industrial_project_all
+(Ovi)  https://github.com/rusuot/industrial_project_all
 
 # Firebase hosting (entire project):
 https://nexus-ecommerce-d1cc9.web.app/home
