@@ -1,5 +1,5 @@
 ### Industrial Project Group Work 
-This repo **contains** the **entire** project code, the **initial POC** started by **Ovi** **and** **continued**, and **finalized** by **Kiros** (new features added & improvements).
+This repo **contains** the **entire** project code, the **initial POC** started by **Ovi** **and** **continued**, and **finalized** by **Kiros** (**new features added & improvements**).
 
 All code was continuously tested, as it was developed, by **Farzaneh**.
 
