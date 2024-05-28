@@ -5,7 +5,7 @@ All code was continuously tested, as it was developed, by **Farzaneh**.
 
 The purpose for this project is Industrial Consulting Project (QHO635) - Solent University.
 
-# Please check README.md from next repo for **details** such as how to run the project and explanations:
+# Please check README.md from next repo for **details** such as how to run the project and other explanations:
 (Ovi)  https://github.com/rusuot/industrial_project_all
 
 ## Tech
