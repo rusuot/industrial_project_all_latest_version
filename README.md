@@ -8,6 +8,27 @@ The purpose for this project is Industrial Consulting Project (QHO635) - Solent 
 # Please check README.md from next repo for details and explanations:
 (Ovi)  https://github.com/rusuot/industrial_project_all
 
+## Tech
+What I have used for this project:
+- [Visual Code](https://code.visualstudio.com/)
+- [Google Firebase](https://firebase.google.com/)
+- [node.js](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial)
+- [React](https://react.dev/)
+- [Dillinger - write readme files](https://dillinger.io/)
+
+# How to run the project:
+1. Download zip file
+2. Create Firebase DB and get detials (if) needed.
+
+# Start project with: 
+<ul>
+<li>npm install</li>
+<li>npm start</li>
+</ul>
+
+
+
+
 # Firebase hosting (entire project):
 https://nexus-ecommerce-d1cc9.web.app/home
 
